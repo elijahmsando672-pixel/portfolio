@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elijah Portfolio
 
-## Getting Started
+Modern portfolio site built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - run local dev server
+- `npm run lint` - run ESLint checks
+- `npm run build` - create production build
+- `npm run start` - run production server
 
-## Learn More
+## Contact form setup
 
-To learn more about Next.js, take a look at the following resources:
+The contact form posts to `app/api/contact/route.ts` and forwards messages to FormSubmit.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Optional env var: `CONTACT_TARGET_EMAIL` (defaults to `elijahmsando672@gmail.com`)
+- Optional env var: `NEXT_PUBLIC_SITE_URL` for canonical URLs and sitemap host
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO and metadata
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/sitemap.ts` generates `sitemap.xml`
+- `src/app/robots.ts` generates `robots.txt`
+- `src/app/opengraph-image.tsx` and `src/app/twitter-image.tsx` generate social preview images

@@ -1,19 +1,33 @@
 export const skills = [
   {
     name: "Frontend Engineering",
-    proof: "Used in Portfolio Website and Task Manager for responsive UI delivery.",
+    proof: "Built responsive UIs with Next.js, React, and Tailwind CSS for the portfolio site and study planner. Focused on accessible components and smooth interactions.",
+    href: "/projects/portfolio-site",
   },
   {
     name: "Backend APIs",
-    proof: "Applied in Task Manager and API Dashboard for reliable data workflows.",
+    proof: "Designed RESTful endpoints and data workflows for the study schedule app and Bizflow dashboard. Used Node.js and PostgreSQL for reliable data handling.",
+    href: "/projects/bizflow",
   },
   {
     name: "TypeScript",
-    proof: "Primary language across major projects for type-safe development.",
+    proof: "Primary language across every project. Used for type-safe React components, API routes, and shared schemas to reduce runtime errors and improve DX.",
+    href: "/projects",
   },
   {
     name: "Product Thinking",
-    proof: "Defined feature scope and UX priorities based on user outcomes.",
+    proof: "Defined feature scope, user flows, and UX priorities based on real outcomes. Translated product requirements into clean, maintainable code.",
+    href: "/projects",
+  },
+  {
+    name: "UI / UX Design",
+    proof: "Designed clean interfaces with a focus on typography, spacing, and visual hierarchy. Iterated on layouts based on usability feedback.",
+    href: "/projects/portfolio-site",
+  },
+  {
+    name: "DevOps & Deployment",
+    proof: "Set up CI pipelines, Vercel deployments, and environment configs for multiple projects. Familiar with Git workflows and production monitoring.",
+    href: "/projects",
   },
 ];
 
@@ -43,10 +57,12 @@ export const testimonials = [
     quote:
       "Elijah brings clarity to messy product ideas and turns them into clean, working software quickly.",
     author: "Product Collaborator",
+    role: "Startup founder",
   },
   {
     quote:
       "Strong communication, thoughtful architecture decisions, and reliable execution from start to finish.",
     author: "Engineering Peer",
+    role: "Full-stack engineer",
   },
 ];

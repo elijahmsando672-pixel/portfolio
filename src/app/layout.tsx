@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { getBaseUrl, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,19 +18,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://elijahmsando672-pixel.github.io"),
+  metadataBase: new URL(getBaseUrl()),
   title: {
-    default: "Elijah Portfolio",
-    template: "%s | Elijah Portfolio",
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Portfolio of Elijah - full-stack developer focused on clean architecture and polished product experiences.",
+  description: siteConfig.description,
   openGraph: {
-    title: "Elijah Portfolio",
-    description:
-      "Portfolio of Elijah - full-stack developer focused on clean architecture and polished product experiences.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     type: "website",
-    url: "https://elijahmsando672-pixel.github.io",
+    url: getBaseUrl(),
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Elijah Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ["/twitter-image"],
   },
 };
 
@@ -43,9 +57,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <SiteHeader />
-        <div className="flex-1">{children}</div>
-        <SiteFooter />
+        <ThemeProvider>
+          <SiteHeader />
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
