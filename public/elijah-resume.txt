@@ -1,0 +1,19 @@
+Elijah
+Full-Stack Developer
+Email: elijahmsando672@gmail.com
+GitHub: https://github.com/elijahmsando672-pixel
+
+Summary
+I build fast, maintainable web products with clean architecture and practical UX.
+
+Core Skills
+- Next.js
+- React
+- TypeScript
+- Node.js
+- PostgreSQL
+
+Selected Work
+- Portfolio Website (Next.js, TypeScript, Tailwind CSS) - https://github.com/elijahmsando672-pixel/emoh
+- Study Schedule (React, Node.js, PostgreSQL) - https://github.com/elijahmsando672-pixel/study-schedule
+- Bizflow (Next.js, TypeScript) - https://github.com/elijahmsando672-pixel/Bizflow
