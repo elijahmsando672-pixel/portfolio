@@ -17,35 +17,44 @@ export default function ProjectsPage() {
       </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {projects.map((project) => (
-          <article
-            key={project.slug}
-            className="rounded-2xl border border-black/10 bg-white p-5 transition hover:-translate-y-0.5 hover:border-black/25 dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-white/30"
-          >
-            <h2 className="text-xl font-semibold">{project.name}</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-              {project.description}
-            </p>
-            <p className="mt-3 text-xs text-zinc-500">
-              {project.stack.join(" • ")}
-            </p>
-            <p className="mt-2 text-xs text-zinc-500">{project.year}</p>
-            <div className="mt-4 flex items-center gap-4 text-sm">
-              <Link
-                href={`/projects/${project.slug}`}
-                className="font-medium underline underline-offset-4"
-              >
-                Case study
-              </Link>
-              <Link href={project.liveUrl} className="text-zinc-600 dark:text-zinc-300">
-                Live
-              </Link>
-              <Link href={project.repoUrl} className="text-zinc-600 dark:text-zinc-300">
-                Code
-              </Link>
-            </div>
-          </article>
-        ))}
+        {projects.map((project) => {
+          const liveLabel = project.liveUrl.includes("github.com")
+            ? "View project"
+            : "Live";
+          const showCodeLink = project.repoUrl !== project.liveUrl;
+
+          return (
+            <article
+              key={project.slug}
+              className="rounded-2xl border border-black/10 bg-white p-5 transition hover:-translate-y-0.5 hover:border-black/25 dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-white/30"
+            >
+              <h2 className="text-xl font-semibold">{project.name}</h2>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                {project.description}
+              </p>
+              <p className="mt-3 text-xs text-zinc-500">
+                {project.stack.join(" • ")}
+              </p>
+              <p className="mt-2 text-xs text-zinc-500">{project.year}</p>
+              <div className="mt-4 flex items-center gap-4 text-sm">
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="font-medium underline underline-offset-4"
+                >
+                  Case study
+                </Link>
+                <Link href={project.liveUrl} className="text-zinc-600 dark:text-zinc-300">
+                  {liveLabel}
+                </Link>
+                {showCodeLink ? (
+                  <Link href={project.repoUrl} className="text-zinc-600 dark:text-zinc-300">
+                    Source code
+                  </Link>
+                ) : null}
+              </div>
+            </article>
+          );
+        })}
       </div>
     </main>
   );

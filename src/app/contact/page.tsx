@@ -41,7 +41,7 @@ export default function ContactPage() {
         </Link>
         <article className="rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-white/[0.02]">
           <p className="text-sm text-zinc-500">Location / timezone</p>
-          <p className="mt-2 text-lg font-medium">Nigeria (WAT, UTC+1)</p>
+          <p className="mt-2 text-lg font-medium">Nairobi, Kenya (EAT, UTC+3)</p>
           <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
             Available for freelance and full-time remote roles.
           </p>

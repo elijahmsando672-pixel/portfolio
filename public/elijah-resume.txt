@@ -2,6 +2,7 @@ Elijah
 Full-Stack Developer
 Email: elijahmsando672@gmail.com
 GitHub: https://github.com/elijahmsando672-pixel
+Location: Nairobi, Kenya (EAT, UTC+3)
 
 Summary
 I build fast, maintainable web products with clean architecture and practical UX.

@@ -44,6 +44,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
     notFound();
   }
 
+  const liveLabel = project.liveUrl.includes("github.com")
+    ? "View project"
+    : "Live demo";
+  const showCodeLink = project.repoUrl !== project.liveUrl;
+
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-14 sm:py-16">
       <Link href="/projects" className="text-sm text-zinc-600 dark:text-zinc-300">
@@ -68,14 +73,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           href={project.liveUrl}
           className="rounded-full bg-black px-4 py-2 text-white dark:bg-white dark:text-black"
         >
-          Live demo
+          {liveLabel}
         </Link>
-        <Link
-          href={project.repoUrl}
-          className="rounded-full border border-black/20 px-4 py-2 dark:border-white/20"
-        >
-          View code
-        </Link>
+        {showCodeLink ? (
+          <Link
+            href={project.repoUrl}
+            className="rounded-full border border-black/20 px-4 py-2 dark:border-white/20"
+          >
+            Source code
+          </Link>
+        ) : null}
       </div>
 
       <section className="mt-10 space-y-6">
