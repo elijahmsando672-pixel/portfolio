@@ -15,7 +15,7 @@ export function SiteFooter() {
             GitHub
           </Link>
           <Link
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/elijah"
             target="_blank"
             rel="noreferrer"
             className="transition hover:text-black dark:hover:text-white"

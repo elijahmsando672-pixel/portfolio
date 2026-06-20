@@ -104,7 +104,7 @@ export function ContactForm() {
         {status === "sending" ? "Sending..." : "Send message"}
       </button>
       {status === "success" && (
-        <p className="mt-3 text-sm text-green-600 dark:text-green-400">
+        <p className="mt-3 text-sm text-green-600 dark:text-green-400" role="status">
           Message sent successfully!
         </p>
       )}

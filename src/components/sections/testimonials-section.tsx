@@ -17,8 +17,8 @@ export function TestimonialsSection() {
               {item.quote}
             </p>
             <footer className="mt-3 text-xs font-medium text-zinc-500">
-              &mdash; {item.author}
-              {"role" in item && item.role ? `, ${item.role}` : ""}
+              &mdash; <cite className="not-italic">{item.author}</cite>
+              {item.role ? `, ${item.role}` : ""}
             </footer>
           </blockquote>
         ))}

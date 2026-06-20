@@ -27,6 +27,7 @@ export function HeroSection() {
           </Link>
           <Link
             href="/contact"
+            aria-label="Go to contact page"
             className="rounded-full border border-black/20 px-5 py-2.5 text-sm font-medium transition hover:border-black/40 dark:border-white/25 dark:hover:border-white/50"
           >
             Let us talk

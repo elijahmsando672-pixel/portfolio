@@ -12,3 +12,21 @@ export type Project = {
   outcome: string;
   featured?: boolean;
 };
+
+export type Skill = {
+  name: string;
+  proof: string;
+  href: string;
+};
+
+export type Experience = {
+  period: string;
+  title: string;
+  detail: string;
+};
+
+export type Testimonial = {
+  quote: string;
+  author: string;
+  role: string;
+};

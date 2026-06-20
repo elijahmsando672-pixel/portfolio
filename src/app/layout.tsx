@@ -24,11 +24,16 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.author }],
+  robots: { index: true, follow: true },
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
     type: "website",
     url: getBaseUrl(),
+    siteName: siteConfig.name,
+    locale: "en_US",
     images: [
       {
         url: "/opengraph-image",
@@ -55,11 +60,43 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Elijah",
+              url: getBaseUrl(),
+              jobTitle: "Full-Stack Developer",
+              knowsAbout: ["Web Development", "React", "Next.js", "TypeScript", "Node.js"],
+            }),
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var e=localStorage.getItem("theme");if(e==="dark"||(!e&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")})()`,
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-black focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+        >
+          Skip to content
+        </a>
         <ThemeProvider>
           <SiteHeader />
-          <div className="flex-1">{children}</div>
+          <div id="main-content" className="flex-1">
+            {children}
+          </div>
           <SiteFooter />
         </ThemeProvider>
         <Analytics />
