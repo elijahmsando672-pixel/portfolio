@@ -21,16 +21,16 @@ export function ProjectCard({ project, index, headingLevel = "h2" }: Props) {
     <article className={`${cardBase} ${accent} group`}>
       <div className="flex items-start justify-between">
         <Heading className="text-lg font-semibold">{project.name}</Heading>
-        <span className="shrink-0 text-xs text-zinc-400">{project.year}</span>
+        <span className="shrink-0 text-xs text-stone-400 dark:text-stone-500">{project.year}</span>
       </div>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+      <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
         {project.description}
       </p>
       <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Technologies used">
         {project.stack.map((tech) => (
           <li
             key={tech}
-            className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-[11px] font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+            className="rounded-full bg-stone-200/60 px-2.5 py-0.5 text-[11px] font-medium text-stone-700 dark:bg-stone-800/60 dark:text-stone-400"
           >
             {tech}
           </li>
@@ -47,7 +47,7 @@ export function ProjectCard({ project, index, headingLevel = "h2" }: Props) {
           href={project.liveUrl}
           target="_blank"
           rel="noreferrer"
-          className="text-zinc-600 transition hover:text-black dark:text-zinc-300 dark:hover:text-white"
+          className="text-stone-600 transition hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100"
         >
           {liveLabel(project.liveUrl)} &rarr;
         </Link>
@@ -56,7 +56,7 @@ export function ProjectCard({ project, index, headingLevel = "h2" }: Props) {
             href={project.repoUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-zinc-600 transition hover:text-black dark:text-zinc-300 dark:hover:text-white"
+            className="text-stone-600 transition hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100"
           >
             Source code
           </Link>

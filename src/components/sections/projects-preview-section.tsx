@@ -11,7 +11,7 @@ export function ProjectsPreviewSection() {
         <h2 className="text-2xl font-semibold">Featured Projects</h2>
         <Link
           href="/projects"
-          className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+          className="text-sm font-medium text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100"
         >
           See all projects &rarr;
         </Link>

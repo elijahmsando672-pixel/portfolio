@@ -27,9 +27,9 @@ export function SiteHeader() {
   const mounted = useHydrated();
 
   return (
-    <header className="sticky top-0 z-20 border-b border-black/10 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-black/70">
+    <header className="sticky top-0 z-20 border-b border-stone-300/30 bg-stone-100/80 backdrop-blur dark:border-stone-700/30 dark:bg-stone-900/70">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" aria-label="Go to homepage" className="text-sm font-semibold tracking-wide">
+        <Link href="/" aria-label="Go to homepage" className="text-sm font-semibold tracking-wide text-stone-800 dark:text-stone-100">
           Elijah
         </Link>
         <nav className="hidden items-center gap-2 text-sm sm:flex">
@@ -39,8 +39,8 @@ export function SiteHeader() {
               href={link.href}
               className={`rounded-full px-3 py-1.5 transition-colors ${
                 pathname === link.href
-                  ? "bg-black text-white dark:bg-white dark:text-black"
-                  : "text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                  ? "bg-stone-800 text-stone-100 dark:bg-stone-100 dark:text-stone-900"
+                  : "text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100"
               }`}
             >
               {link.label}
@@ -48,7 +48,7 @@ export function SiteHeader() {
           ))}
           <button
             onClick={toggleTheme}
-            className="ml-2 rounded-full border border-black/15 p-1.5 text-sm transition hover:border-black/30 dark:border-white/20 dark:hover:border-white/40"
+            className="ml-2 rounded-full border border-stone-400/50 p-1.5 text-sm transition hover:border-stone-500 dark:border-stone-600 dark:hover:border-stone-500"
             aria-label="Toggle theme"
           >
             {mounted ? (
@@ -68,7 +68,7 @@ export function SiteHeader() {
         </nav>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="rounded-full border border-black/15 p-1.5 sm:hidden dark:border-white/20"
+          className="rounded-full border border-stone-400/50 p-1.5 sm:hidden dark:border-stone-600"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
@@ -85,7 +85,7 @@ export function SiteHeader() {
       {menuOpen && (
         <nav
           id="mobile-nav"
-          className="flex flex-col items-center gap-2 border-t border-black/10 px-6 pb-4 pt-3 text-sm sm:hidden dark:border-white/10"
+          className="flex flex-col items-center gap-2 border-t border-stone-300/30 px-6 pb-4 pt-3 text-sm sm:hidden dark:border-stone-700/30"
         >
           {links.map((link) => (
             <Link
@@ -94,8 +94,8 @@ export function SiteHeader() {
               onClick={() => setMenuOpen(false)}
               className={`w-full rounded-full px-3 py-1.5 text-center transition-colors ${
                 pathname === link.href
-                  ? "bg-black text-white dark:bg-white dark:text-black"
-                  : "text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                  ? "bg-stone-800 text-stone-100 dark:bg-stone-100 dark:text-stone-900"
+                  : "text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100"
               }`}
             >
               {link.label}
@@ -103,7 +103,7 @@ export function SiteHeader() {
           ))}
           <button
             onClick={toggleTheme}
-            className="mt-2 rounded-full border border-black/15 p-1.5 text-sm transition hover:border-black/30 dark:border-white/20 dark:hover:border-white/40"
+            className="mt-2 rounded-full border border-stone-400/50 p-1.5 text-sm transition hover:border-stone-500 dark:border-stone-600 dark:hover:border-stone-500"
             aria-label="Toggle theme"
           >
             {mounted ? (

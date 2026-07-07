@@ -18,8 +18,8 @@ export default function TwitterImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 64,
-          background: "linear-gradient(160deg, #0a0a0a, #1f2937)",
-          color: "#f8fafc",
+          background: "linear-gradient(160deg, #1c1917, #3d3229)",
+          color: "#f5f0e8",
           fontFamily: "sans-serif",
         }}
       >

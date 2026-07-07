@@ -8,15 +8,15 @@ export function TestimonialsSection() {
         {testimonials.map((item) => (
           <blockquote
             key={item.author}
-            className="relative rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-white/[0.02]"
+            className="relative rounded-2xl border border-stone-300/40 bg-stone-100 p-5 dark:border-stone-700/30 dark:bg-stone-900/30"
           >
-            <span className="absolute -left-1 -top-2 text-4xl leading-none text-zinc-300 dark:text-zinc-600">
+            <span className="absolute -left-1 -top-2 text-4xl leading-none text-stone-400 dark:text-stone-600">
               &ldquo;
             </span>
-            <p className="mt-2 text-sm italic text-zinc-700 dark:text-zinc-200">
+            <p className="mt-2 text-sm italic text-stone-700 dark:text-stone-200">
               {item.quote}
             </p>
-            <footer className="mt-3 text-xs font-medium text-zinc-500">
+            <footer className="mt-3 text-xs font-medium text-stone-500">
               &mdash; <cite className="not-italic">{item.author}</cite>
               {item.role ? `, ${item.role}` : ""}
             </footer>

@@ -19,7 +19,7 @@ export default function AboutPage() {
         <h1 className="text-4xl font-semibold">About</h1>
       </AnimatedSection>
       <AnimatedSection>
-        <div className="mt-5 max-w-3xl space-y-4 text-zinc-700 dark:text-zinc-300">
+        <div className="mt-5 max-w-3xl space-y-4 text-stone-700 dark:text-stone-300">
           <p>
             I am Elijah, a full-stack developer focused on building fast,
             accessible, and maintainable web applications.
@@ -45,13 +45,13 @@ export default function AboutPage() {
             {experiences.map((item) => (
               <article
                 key={item.period}
-                className="rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-white/[0.02]"
+                className="rounded-2xl border border-stone-300/40 bg-stone-100 p-5 dark:border-stone-700/30 dark:bg-stone-900/30"
               >
-                <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+                <p className="text-xs font-medium uppercase tracking-wide text-stone-500">
                   {item.period}
                 </p>
                 <h3 className="mt-1 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
                   {item.detail}
                 </p>
               </article>

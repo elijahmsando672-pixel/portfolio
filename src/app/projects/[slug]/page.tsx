@@ -72,11 +72,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-14 sm:py-16">
       <AnimatedSection>
-        <Link href="/projects" className="text-sm text-zinc-600 dark:text-zinc-300">
+        <Link href="/projects" className="text-sm text-stone-600 dark:text-stone-300">
           ← Back to projects
         </Link>
         <h1 className="mt-4 text-4xl font-semibold">{project.name}</h1>
-        <p className="mt-3 text-zinc-600 dark:text-zinc-300">
+        <p className="mt-3 text-stone-600 dark:text-stone-300">
           {project.description}
         </p>
       </AnimatedSection>
@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           {project.stack.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-black/10 px-3 py-1 text-xs dark:border-white/15"
+              className="rounded-full border border-stone-300/50 px-3 py-1 text-xs dark:border-stone-600/50"
             >
               {item}
             </span>
@@ -98,7 +98,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-black px-4 py-2 text-white dark:bg-white dark:text-black"
+             className="rounded-full bg-stone-800 px-4 py-2 text-stone-100 dark:bg-stone-100 dark:text-stone-900"
           >
             {liveLabel}
           </Link>
@@ -107,7 +107,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               href={project.repoUrl}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-black/20 px-4 py-2 dark:border-white/20"
+               className="rounded-full border border-stone-400/50 px-4 py-2 dark:border-stone-600/50"
             >
               Source code
             </Link>
@@ -117,27 +117,27 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
       <AnimatedSection>
         <section className="mt-10 grid gap-4 sm:grid-cols-2">
-          <article className="rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-white/[0.02]">
+          <article className="rounded-2xl border border-stone-300/40 bg-stone-100 p-6 dark:border-stone-700/30 dark:bg-stone-900/30">
             <h2 className="text-lg font-semibold">Role</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
               {project.role}
             </p>
           </article>
-          <article className="rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-white/[0.02]">
+          <article className="rounded-2xl border border-stone-300/40 bg-stone-100 p-6 dark:border-stone-700/30 dark:bg-stone-900/30">
             <h2 className="text-lg font-semibold">Problem</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
               {project.problem}
             </p>
           </article>
-          <article className="rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-white/[0.02]">
+          <article className="rounded-2xl border border-stone-300/40 bg-stone-100 p-6 dark:border-stone-700/30 dark:bg-stone-900/30">
             <h2 className="text-lg font-semibold">Solution</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
               {project.solution}
             </p>
           </article>
-          <article className="rounded-2xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-white/[0.02]">
+          <article className="rounded-2xl border border-stone-300/40 bg-stone-100 p-6 dark:border-stone-700/30 dark:bg-stone-900/30">
             <h2 className="text-lg font-semibold">Outcome</h2>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
               {project.outcome}
             </p>
           </article>

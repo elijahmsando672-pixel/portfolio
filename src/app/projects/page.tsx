@@ -16,7 +16,7 @@ export default function ProjectsPage() {
     <main className="mx-auto w-full max-w-5xl px-6 py-14 sm:py-16">
       <AnimatedSection>
         <h1 className="text-4xl font-semibold">Projects</h1>
-        <p className="mt-3 max-w-2xl text-zinc-600 dark:text-zinc-300">
+        <p className="mt-3 max-w-2xl text-stone-600 dark:text-stone-300">
           A curated mix of shipped products and experiments. Each one reflects
           how I approach product decisions, architecture, and user experience.
         </p>

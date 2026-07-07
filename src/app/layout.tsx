@@ -64,8 +64,8 @@ export default function RootLayout({
     >
       <head>
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1c1917" media="(prefers-color-scheme: dark)" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -88,7 +88,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-black focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-stone-800 focus:px-4 focus:py-2 focus:text-sm focus:text-stone-100"
         >
           Skip to content
         </a>
