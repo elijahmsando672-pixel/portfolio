@@ -64,8 +64,8 @@ export default function RootLayout({
     >
       <head>
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#1c1917" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#eef2f7" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

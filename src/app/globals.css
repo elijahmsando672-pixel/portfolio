@@ -3,14 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f5f0e8;
+  --background: #eef2f7;
   --foreground: #3d3229;
   --accent: #b45309;
   --accent-light: #fef3c7;
 }
 
 .dark {
-  --background: #1c1917;
+  --background: #0f172a;
   --foreground: #e7e5e4;
   --accent: #d97706;
   --accent-light: #292524;
@@ -33,12 +33,12 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #f5f0e8;
+  color: #eef2f7;
 }
 
 .dark ::selection {
   background: var(--accent);
-  color: #1c1917;
+  color: #0f172a;
 }
 
 @keyframes fade-in-up {
